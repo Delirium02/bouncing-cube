@@ -18,13 +18,13 @@ body {
 
 @keyframes bounce {
     0%, 100% {
-        transform: translateY(0) scaleY(1);
+        transform: translateY(0);
+        animation-timing-function: ease-out;
     }
-    10% {
-        transform: translateY(0) scaleY(0.8);
-    }
+
     50% {
-        transform: translateY(-100px) scaleY(1.1);
+        transform: translateY(-100px);
+        animation-timing-function: ease-in;
     }
 }
 
@@ -45,15 +45,50 @@ body {
     height: 150px;
     width: 150px;
     background-color: rgb(255, 83, 21);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden-text {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.text {
+    font-size: 50px;
+    color: white;
+    transition: opacity 1s;
 }
 
 .bounce-button {
     display: block;
-    margin: 20px auto;
+    margin: 15px auto;
     padding: 10px 20px;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.hidden-button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reset-button {
+    display: none;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 100;
+    margin-top: 10rem;
 }
