@@ -1,0 +1,59 @@
+/* CSS Reset */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* CUSTOM CSS */
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) scaleY(1);
+    }
+    10% {
+        transform: translateY(0) scaleY(0.8);
+    }
+    50% {
+        transform: translateY(-100px) scaleY(1.1);
+    }
+}
+
+body {
+    background-color: #c2c2c2;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.cube {
+    height: 150px;
+    width: 150px;
+    background-color: rgb(255, 83, 21);
+}
+
+.bounce-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
